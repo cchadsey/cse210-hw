@@ -22,27 +22,56 @@ class ReflectingActivity: Activity{
     
     }
 
-    public ReflectingActivity(){
+    public ReflectingActivity(): base(string name, string description){
 
     }
 
     public void Run(){
+        base.DisplayStartingMessage("Reflecting");
+        string prompt = GetRandomPrompt();
+        int time = base.getDuration();
+        DisplayPrompt(prompt)
+        base.ShowCountDown(5)
+
+        DateTime t = DateTime.Now;
+        DateTime f = t.AddSeconds(time);
+
+        
+        while (DateTime.Now < f){
+            string question = GetRandomQuestion();
+            DisplayQuestion(question);
+            base.ShowSpinner(10);
+        
+        }
+        base.DisplayEndingMessage("Reflecting")
 
     }
 
-    public String GetRandomPrompt(){
+    public string GetRandomPrompt(){
+        Random rnd = new Random();
 
+        prompt = _prompts[rnd.Next(_prompts.count())];
+
+        return prompt;
     }
 
     public string GetRandomQuestion(){
+        Random rnd = new Random();
+
+        question = _questions[rnd.Next(_questions.count())];
+
+        return question;
+    }
+
+    public void DisplayPrompt(string prompt){
+
+        Console.WriteLine(prompt)
 
     }
 
-    public void DisplayPrompt(){
+    public void DisplayQuestion(string question){
 
-    }
-
-    public void DisplayQuestion(){
+        Console.WriteLine(question)
 
     }
 

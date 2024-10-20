@@ -12,17 +12,24 @@ class ListingActivity: Activity{
         "Who are some of your personal heros?"
     }
 
-    public ListingActivity(): base(){
+    public ListingActivity(): base(string name, string description, int duration){
 
     }
 
     public void Run(){
-        base.DisplayStartingMessage()
-        
+        base.DisplayStartingMessage("Listing");
+        int time = base.getDuration();
 
-        GetRandomPrompt()
+        GetRandomPrompt();
+       
 
         base.ShowCountDown(10);
+
+        List<string> userlist = GetListFromUser(time);
+
+        Console.WriteLine($"You entered {userlist.count()} items!");
+
+        base.DisplayEndingMessage("Listing");
 
 
 
@@ -37,13 +44,17 @@ class ListingActivity: Activity{
 
     }
 
-    public List<string> GetListFromUser(){
+    public List<string> GetListFromUser(int seconds){
 
         List<string> userList = new List<string>();
-    
-        while (){
 
+        DateTime t = DateTime.Now;
+        DateTime f = t.AddSeconds(seconds);
 
+        
+        while (DateTime.Now < f){
+
+            Console.Write(">")
             string input =  Console.ReadLine();
             userList.Add(input);
 

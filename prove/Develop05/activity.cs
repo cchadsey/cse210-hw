@@ -7,19 +7,27 @@ class Activity{
 
     private int _duration;
 
-    public Activity(string name,string description, int duration){
+    public Activity(string name,string description){
         _name = name;
         _description = description;
-        _duration = duration;
+   
 
     }
-
-    public void DisplayStartingMessage(){
-
+    public int getDuration(){
+        return _duration;
     }
 
-    public void DisplayEndingMessage(){
+    public void DisplayStartingMessage(string activity){
+        Console.WriteLine($"Welcome to the {activity} Activity. {_description} How long would you like this session to last? (in seconds)");
+        _duration = Console.ReadLine()
+        Console.WriteLine($"Please Prepare to beigin the {activity} Activity.");
+    }
 
+    public void DisplayEndingMessage(string activity){
+        Console.WriteLine("Wonderful Job!");
+        Thread.Sleep(3000);
+        Console.WriteLine($"You completed the {activity} Activity, Which lasted for {_duration}.");
+        Thread.Sleep(4000);
     }
 
     public void ShowSpinner(int seconds){
