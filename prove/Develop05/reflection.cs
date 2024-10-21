@@ -30,8 +30,8 @@ class ReflectingActivity: Activity{
         base.DisplayStartingMessage("Reflecting");
         string prompt = GetRandomPrompt();
         int time = base.getDuration();
-        DisplayPrompt(prompt)
-        base.ShowCountDown(5)
+        DisplayPrompt(prompt);
+        base.ShowCountDown(5);
 
         DateTime t = DateTime.Now;
         DateTime f = t.AddSeconds(time);
@@ -65,13 +65,13 @@ class ReflectingActivity: Activity{
 
     public void DisplayPrompt(string prompt){
 
-        Console.WriteLine(prompt)
+        Console.WriteLine(prompt);
 
     }
 
     public void DisplayQuestion(string question){
 
-        Console.WriteLine(question)
+        Console.WriteLine(question);
 
     }
 

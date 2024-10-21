@@ -19,7 +19,7 @@ class Activity{
 
     public void DisplayStartingMessage(string activity){
         Console.WriteLine($"Welcome to the {activity} Activity. {_description} How long would you like this session to last? (in seconds)");
-        _duration = Console.ReadLine()
+        _duration = Console.ReadLine();
         Console.WriteLine($"Please Prepare to beigin the {activity} Activity.");
     }
 
@@ -57,7 +57,7 @@ class Activity{
             
             Console.Write(p);
             Thread.Sleep(1000);
-            p --;;
+            p --;
         }
 
 

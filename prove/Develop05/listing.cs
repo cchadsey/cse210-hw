@@ -54,7 +54,7 @@ class ListingActivity: Activity{
         
         while (DateTime.Now < f){
 
-            Console.Write(">")
+            Console.Write(">");
             string input =  Console.ReadLine();
             userList.Add(input);
 

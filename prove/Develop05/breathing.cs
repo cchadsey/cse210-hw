@@ -2,7 +2,7 @@ using System;
 
 class BreathingActivity: Activity{
 
-    public BreathingActivity(): base(string name, string description, int duration){
+    public BreathingActivity(): base(string name, string description){
 
 
     }
@@ -16,12 +16,12 @@ class BreathingActivity: Activity{
 
         
         while (DateTime.Now < f){
-            Console.WriteLine("Breathe in...")
-            base.ShowCountDown(5)
-            Console.WriteLine("Breathe Out...")
-            base.ShowCountDown(5)
+            Console.WriteLine("Breathe in...");
+            base.ShowCountDown(5);
+            Console.WriteLine("Breathe Out...");
+            base.ShowCountDown(5);
         }
-        base.DisplayEndingMessage()
+        base.DisplayEndingMessage();
 
     }
 
