@@ -10,9 +10,9 @@ class ListingActivity: Activity{
         "Who are people that you have helped this week?",
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heros?"
-    }
+    };
 
-    public ListingActivity(): base(string name, string description, int duration){
+    public ListingActivity():base("Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area."){
 
     }
 
@@ -27,7 +27,7 @@ class ListingActivity: Activity{
 
         List<string> userlist = GetListFromUser(time);
 
-        Console.WriteLine($"You entered {userlist.count()} items!");
+        Console.WriteLine($"You entered {userlist.Count()} items!");
 
         base.DisplayEndingMessage("Listing");
 
@@ -38,7 +38,7 @@ class ListingActivity: Activity{
     public void GetRandomPrompt(){
         Random rnd = new Random();
 
-        prompt = _prompts[rnd.Next(_prompts.count())];
+        string prompt = _prompts[rnd.Next(_prompts.Count())];
 
         Console.WriteLine(prompt);
 

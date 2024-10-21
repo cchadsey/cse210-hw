@@ -7,7 +7,7 @@ class ReflectingActivity: Activity{
         "Think of a time when you did something really difficult",
         "Think of a time when you helped someone in need.",
         "Think of a time when you did something truly selfless."
-    }
+    };
 
     private List<string> _questions = new List<string>{
         "Why was this experience maningful to you?",
@@ -20,10 +20,10 @@ class ReflectingActivity: Activity{
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mine in the future?"
     
-    }
+    };
 
-    public ReflectingActivity(): base(string name, string description){
-
+    public ReflectingActivity(): base("Reflecting", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life."){
+        
     }
 
     public void Run(){
@@ -43,14 +43,14 @@ class ReflectingActivity: Activity{
             base.ShowSpinner(10);
         
         }
-        base.DisplayEndingMessage("Reflecting")
+        base.DisplayEndingMessage("Reflecting");
 
     }
 
     public string GetRandomPrompt(){
         Random rnd = new Random();
 
-        prompt = _prompts[rnd.Next(_prompts.count())];
+        string prompt = _prompts[rnd.Next(_prompts.Count())];
 
         return prompt;
     }
@@ -58,7 +58,7 @@ class ReflectingActivity: Activity{
     public string GetRandomQuestion(){
         Random rnd = new Random();
 
-        question = _questions[rnd.Next(_questions.count())];
+        string question = _questions[rnd.Next(_questions.Count())];
 
         return question;
     }

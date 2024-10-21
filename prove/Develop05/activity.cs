@@ -19,7 +19,8 @@ class Activity{
 
     public void DisplayStartingMessage(string activity){
         Console.WriteLine($"Welcome to the {activity} Activity. {_description} How long would you like this session to last? (in seconds)");
-        _duration = Console.ReadLine();
+        string input = Console.ReadLine();
+        _duration = int.Parse(input);
         Console.WriteLine($"Please Prepare to beigin the {activity} Activity.");
     }
 

@@ -2,7 +2,7 @@ using System;
 
 class BreathingActivity: Activity{
 
-    public BreathingActivity(): base(string name, string description){
+    public BreathingActivity(): base("Breathing", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing."){
 
 
     }
@@ -21,7 +21,7 @@ class BreathingActivity: Activity{
             Console.WriteLine("Breathe Out...");
             base.ShowCountDown(5);
         }
-        base.DisplayEndingMessage();
+        base.DisplayEndingMessage("Breathing");
 
     }
 
