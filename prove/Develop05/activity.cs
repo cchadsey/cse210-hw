@@ -17,17 +17,17 @@ class Activity{
         return _duration;
     }
 
-    public void DisplayStartingMessage(string activity){
-        Console.WriteLine($"Welcome to the {activity} Activity. {_description} How long would you like this session to last? (in seconds)");
+    public void DisplayStartingMessage(){
+        Console.WriteLine($"Welcome to the {_name} Activity. {_description} How long would you like this session to last? (in seconds)");
         string input = Console.ReadLine();
         _duration = int.Parse(input);
-        Console.WriteLine($"Please Prepare to beigin the {activity} Activity.");
+        Console.WriteLine($"Please Prepare to beigin the {_name} Activity.");
     }
 
-    public void DisplayEndingMessage(string activity){
+    public void DisplayEndingMessage(){
         Console.WriteLine("Wonderful Job!");
         Thread.Sleep(3000);
-        Console.WriteLine($"You completed the {activity} Activity, Which lasted for {_duration}.");
+        Console.WriteLine($"You completed the {_name} Activity, Which lasted for {_duration} seconds.");
         Thread.Sleep(4000);
     }
 

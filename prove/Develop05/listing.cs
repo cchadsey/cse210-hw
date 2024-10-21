@@ -17,7 +17,7 @@ class ListingActivity: Activity{
     }
 
     public void Run(){
-        base.DisplayStartingMessage("Listing");
+        base.DisplayStartingMessage();
         int time = base.getDuration();
 
         GetRandomPrompt();
@@ -26,10 +26,10 @@ class ListingActivity: Activity{
         base.ShowCountDown(10);
 
         List<string> userlist = GetListFromUser(time);
+        _count = userlist.Count();
+        Console.WriteLine($"You entered {_count} items!");
 
-        Console.WriteLine($"You entered {userlist.Count()} items!");
-
-        base.DisplayEndingMessage("Listing");
+        base.DisplayEndingMessage();
 
 
 

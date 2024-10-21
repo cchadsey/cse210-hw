@@ -27,13 +27,16 @@ class Program
                 
                 case 1:
                     breathe.Run();
+                    option = 0;
                     break;
 
                 case 2:
                     reflect.Run();
+                    option = 0;
                     break;
                 case 3:
                     list.Run();
+                    option = 0;
                     break;
 
                 case 4:

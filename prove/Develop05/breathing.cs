@@ -8,7 +8,7 @@ class BreathingActivity: Activity{
     }
 
     public void Run(){
-        base.DisplayStartingMessage("Breathing");
+        base.DisplayStartingMessage();
         int time = base.getDuration();
 
         DateTime t = DateTime.Now;
@@ -21,7 +21,7 @@ class BreathingActivity: Activity{
             Console.WriteLine("Breathe Out...");
             base.ShowCountDown(5);
         }
-        base.DisplayEndingMessage("Breathing");
+        base.DisplayEndingMessage();
 
     }
 

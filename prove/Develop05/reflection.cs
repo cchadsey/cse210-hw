@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 
 class ReflectingActivity: Activity{
 
@@ -27,7 +28,7 @@ class ReflectingActivity: Activity{
     }
 
     public void Run(){
-        base.DisplayStartingMessage("Reflecting");
+        base.DisplayStartingMessage();
         string prompt = GetRandomPrompt();
         int time = base.getDuration();
         DisplayPrompt(prompt);
@@ -43,7 +44,8 @@ class ReflectingActivity: Activity{
             base.ShowSpinner(10);
         
         }
-        base.DisplayEndingMessage("Reflecting");
+        base.DisplayEndingMessage();
+        
 
     }
 
