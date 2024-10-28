@@ -6,25 +6,40 @@ public class Goal{
 
     protected string _description;
 
-    protected string _points;
+    protected int _points;
+
+    public Goal(){}
 
     public Goal(string name, string description, string points){
 
     }
 
-    public virtual void RecordEvent(){
+    public virtual int RecordEvent(){
 
+        return _points;
     }
 
-    public virtual bool IsComplete(){
-
+    public  virtual bool IsComplete(){
+        return false;
     }
 
-    public virtual string getDetailsString(){
+    public virtual void getDetailsString(){
+
+        if (IsComplete() == true){
+            Console.Write("[X]");
+        }else{
+            Console.Write("[ ]");
+        }
+        
+        Console.Write($"{_shortName}");
+        Console.Write($"({_description})");
+        Console.Write($"{_points}pts");
 
     }
 
     public virtual string GetStringRepresentation(){
+        string s = $"goal:{_shortName}%{_description}%{_points}";
+        return s;
 
     }
 }
