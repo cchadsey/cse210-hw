@@ -20,15 +20,17 @@ class Activity{
     }
 
     public virtual void getDistance(){
+
         //Distance (km) = swimming laps * 50 / 1000
         //Distance (miles) = swimming laps * 50 / 1000 * 0.62
 
     }
 
-    public virtual void getSpeed(){
+    public virtual int getSpeed(){
         //Speed (mph or kph) = (distance / minutes) * 60
         //Speed = 60 / pace
-
+        
+        return 000;
     }
 
     public virtual void getPace(){

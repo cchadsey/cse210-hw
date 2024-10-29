@@ -1,4 +1,5 @@
 using System;
+using System.IO.Pipes;
 
 class Swimming: Activity{
 
@@ -13,10 +14,12 @@ class Swimming: Activity{
 
     }
 
-    public override void getDistance(){
+    public override double getDistance(){
         //Distance (km) = swimming laps * 50 / 1000
         //Distance (miles) = swimming laps * 50 / 1000 * 0.62
-
+        double i = _laps *50;
+        double km = i /1000;
+        double mi = km * 0.62;
     }
 
     public override void getSpeed(){
@@ -25,9 +28,10 @@ class Swimming: Activity{
 
     }
 
-    public override void getPace(){
+    public override int getPace(){
         //Pace (min per mile or min per km)= minutes / distance
         //Pace = 60 / speed
-
+        int pace = 
+        return pace;
     }
 }
